@@ -320,3 +320,41 @@ for i in range(5):  # range(5) returns [0, 1, 2, 3, 4]
     print(i)
 ```
 
+## Functions
+
+Functions allow you to divide your code into chunks that do specific subtasks, which make your code more readable and reusable.
+
+```python
+# Define the function
+def functionName():
+    # Function Body
+
+functionName()  # Call the function
+```
+
+#### Parameters & Arguments
+
+Functions can be defined with *parameters*, which are essentially variables that are set when the function is called using *arguments*. This allows functions to be reused with different data values.
+
+```python
+def sum(a, b):
+    c = a + b
+    print(c)
+
+sum(3, 2)
+sum(32, 65)
+```
+
+#### Return Values
+
+Functions can also return values back to where the function was called so that the result can be further used.
+
+```python
+def sum(a, b):
+    c = a + b
+    return c
+
+s = sum(a, b)
+print(s)
+```
+
