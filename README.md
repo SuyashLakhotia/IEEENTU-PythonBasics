@@ -166,3 +166,157 @@ print(ages)  # {"Bob" : 24, "Jake" : 24, "John" : 23, "Jane" : 23}
 print(ages.keys())  # ["Bob", "Jake", "John", "Jane"]
 ```
 
+## Control Flow
+
+While sequentially executing code can perform a lot of tasks for us, many tasks require some subtask to be repeated or selectively executed. For example, if we want to calculate the average age in a classroom:
+
+```python
+total = 0
+numOfStudents = 0
+
+studentAge = int(input("What's your age? "))
+total = total + studentAge
+numOfStudents = numOfStudents + 1
+
+studentAge = int(input("What's your age? "))
+total = total + studentAge
+numOfStudents = numOfStudents + 1
+
+studentAge = int(input("What's your age? "))
+total = total + studentAge
+numOfStudents = numOfStudents + 1
+
+...
+
+average = total / numOfStudents
+```
+
+Repeating the same lines of code is tedious and limits the reusability & maintainability of the code. For example, in the above code, if we just wanted to change the user prompt to `Enter your age:` instead, we would have to change many lines of code.
+
+### if Statements
+
+`if` statements are one of the most important control flow tools available in programming. They allow the program to dynamically choose which lines of code to execute depending on a particular condition.
+
+```python
+if <condition>:
+    # Statements here are executed if condition is True
+else:
+    # Statements here are executed if condition is False
+```
+
+```python
+if <conditionA>:
+    # Statements here are executed if conditionA is True
+elif <conditionB>:
+    # Statements here are executed if conditionA is False and conditionB is True
+else:
+    # Statements here are executed if conditionA and conditionB are False
+```
+
+A colon marks the beginning of a *block* and statements within each *block* are indented so that they can be distinguished from each other.
+
+#### Condition
+
+Conditions are *boolean expressions* that return either `True` or `False`. They are made up of *relational operators* and *logical operators*.
+
+**Relational Operators:**
+
+1. `==`: equals to
+2. `!=`: not equals to
+3. `<` : smaller than
+4. `>` : greater than
+5. `<=`: smaller than or equals to
+6. `>=`: greater than or equals to
+
+```python
+if x == y:
+    print("x & y are equal.")
+else:
+    print("x & y are not equal.")
+```
+
+**Logical Operators:**
+
+1. `boolExpr1 and boolExpr2`: Both expressions have to be `True` for the entire expression to be `True`
+2. `boolExpr1 or boolExpr2`: Either one expression has to be `True` for the entire expression to be `True`
+3. `not boolExpr`: Inverts the return value of the expression
+
+```python
+if (x == y) and (y == z):
+    print("x, y & z are equal.")
+```
+
+### Loops
+
+Loops in programming allow the same task to be executed repeatedly for a definite or indefinite number of times. They are made up of four main sections:
+
+1. **Initialize:** Initialize the loop control variable.
+2. **Test:** Continue the loop?
+3. **Loop Body:** Task being repeated.
+4. **Update:** Modify the loop control variable so that the next time we test, we *may* exit the loop.
+
+There are two main kinds of loops:
+
+1. **Counter Controlled:** The number of repetitions of the loop is known before the loop body starts executing.
+2. **Sentinel Controlled:** The number of repetitions of the loop is unknown before the loop body starts executing.
+
+#### while Loop
+
+A `while` loop executes while the given condition is `True` (i.e. until the given condition is `False`).
+
+```python
+while <condition>:
+    # Loop Body
+```
+
+For example, to print all the integers from 1 - 10:
+
+```python
+num = 1                 # Initialize
+while num <= 10:        # Test
+    print(num)          # Loop Body
+    num = num + 1       # Update
+```
+
+An example of a sentinel controlled loop:
+
+```python
+answer = 5
+guess = int(input("Guess a number from 1 - 10: "))
+while guess != answer:
+    guess = int(input("Wrong! Guess a number from 1 - 10: "))
+print("Correct!")
+```
+
+#### for Loop
+
+A `for` loop can be used to iterate through a list and perform tasks accordingly.
+
+```python
+for var in someList:
+    # Loop Body
+```
+
+In every iteration of the loop, the `var` variable will be assigned the next value in the list. For example, the code below will print all the elements in the list in separate lines:
+
+```python
+numList = [2, 1, 4, 5, 3]
+for num in numList:
+    print(num)
+```
+
+A `for` loop can also be used to iterate through a dictionary:
+
+```python
+phoneBook = {"Bob" : "555-555", "Jake" : "555-556", "John" : "555-565", "Jane" : "555-655"}
+for name in phoneBook.keys():
+    print(name + " : " phoneBook[name])
+```
+
+Alternatively, a `for` loop can be used like a `while` loop with a definite number of repetitions using the `range()` function. The `range()` function returns a list of integers from 0 up till but not including the passed argument.
+
+```python
+for i in range(5):  # range(5) returns [0, 1, 2, 3, 4]
+    print(i)
+```
+
