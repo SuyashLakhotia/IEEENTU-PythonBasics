@@ -34,7 +34,7 @@ print("The sum of a & b is: " + (a + b))  # print the sum of a & b
 
 #### What are variables?
 
-Recall variables from algebra — `x = 5`. In programming, variables are used to store data to make it easier to refer to them. The value referred to by a variable can be updated as you execute the program using the *assignment operator* i.e. `=`.
+Recall variables from algebra — `x = 5`. In programming, variables are used to store data temporarily to make it easier to refer to them. The value referred to by a variable can be updated as you execute the program using the *assignment operator* i.e. `=`.
 
 ```python
 a = 3       # simple assignment
@@ -44,10 +44,10 @@ print(a)    # 4
 
 There are four basic data types in Python:
 
-1.  **Integer -** Whole numbers. E.g. `1`, `123`, `89`
-2.  **Float -** Floating decimal point numbers. E.g. `1.3`, `82.4`, `3.14159…`
-3.  **String -** Sequence of characters. E.g. `a`, `abc`, `abc def`
-4.  **Boolean -** Two possible values — `True` or `False`.
+1. **Integer -** Whole numbers. E.g. `1`, `123`, `89`
+2. **Float -** Floating decimal point numbers. E.g. `1.3`, `82.4`, `3.14159…`
+3. **String -** Sequence of characters. E.g. `a`, `abc`, `abc def`
+4. **Boolean -** Two possible values — `True` or `False`.
 
 ```python
 a = 5
@@ -56,7 +56,7 @@ c = "Hello, world"
 d = True
 ```
 
-It is possible to convert a variable from one type to another if the conversion is compatible. For example, converting `"123"` (string) to `123` (integer) is possible.
+It is possible to convert a variable from one type to another if the conversion is compatible. For example, converting `"123"` (string) to `123` (integer) is possible but `"hello"` cannot be converted to an integer.
 
 ```python
 strA = "123"
@@ -74,6 +74,18 @@ print("Hello, world")
 a = 5
 print(a)
 print("The value of 'a' is: " + a)
+```
+
+#### User Input
+
+In Python, we can get input from the user and store this in variables using the `input()` function. The function prints whatever prompt is passed to it and waits for the user input. Once the `Enter` key is pressed, it stores the user input into the variable **as a string**.
+
+```python
+name = input("Enter your name: ")
+print(name)
+
+age = int(input("Enter your age: "))
+print(age)
 ```
 
 #### Arithmetic Operations
@@ -141,16 +153,16 @@ print(len(listOfNums))
 Dictionaries in Python allow you to store key-value pairs. Keys are unique within a dictionary while values may be repeated. For example, a dictionary of names (keys) and ages (values). Because the keys are unique, they are used as the index of the dictionary to access the values.
 
 ```python
-phoneBook = {"Bob" : 21, "Jake" : 24, "John" : 23}
-print(phoneBook["Bob"])   # 21
-print(phoneBook["Jake"])  # 24
+ages = {"Bob" : 21, "Jake" : 24, "John" : 23}
+print(ages["Bob"])   # 21
+print(ages["Jake"])  # 24
 
-phoneBook["Jane"] = 23
-print(phoneBook)  # {"Bob" : 21, "Jake" : 24, "John" : 23, "Jane" : 23}
+ages["Jane"] = 23
+print(ages)  # {"Bob" : 21, "Jake" : 24, "John" : 23, "Jane" : 23}
 
-phoneBook["Bob"] = 24
-print(phoneBook)  # {"Bob" : 24, "Jake" : 24, "John" : 23, "Jane" : 23}
+ages["Bob"] = 24
+print(ages)  # {"Bob" : 24, "Jake" : 24, "John" : 23, "Jane" : 23}
 
-print(phoneBook.keys())  # ["Bob", "Jake", "John", "Jane"]
+print(ages.keys())  # ["Bob", "Jake", "John", "Jane"]
 ```
 
