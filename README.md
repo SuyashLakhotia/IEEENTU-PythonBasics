@@ -337,12 +337,12 @@ functionName()  # Call the function
 Functions can be defined with *parameters*, which are essentially variables that are set when the function is called using *arguments*. This allows functions to be reused with different data values.
 
 ```python
-def sum(a, b):
+def sum(a, b):  # a & b are parameters
     c = a + b
     print(c)
 
-sum(3, 2)
-sum(32, 65)
+sum(3, 2)       # 3 & 2 are arguments
+sum(32, 65)     # 32 & 65 are arguments
 ```
 
 ### Return Values
@@ -354,7 +354,7 @@ def sum(a, b):
     c = a + b
     return c
 
-s = sum(a, b)
+s = sum(a, b)   # s is set to the value of c from sum()
 print(s)
 ```
 
