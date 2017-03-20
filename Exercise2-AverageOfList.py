@@ -4,5 +4,5 @@ total = 0
 for num in numList:
     total = total + num
 
-print("Sum: " + total)
-print("Average: " + (total / len(numList)))
+print("Sum: " + str(total))
+print("Average: " + str(total / len(numList)))

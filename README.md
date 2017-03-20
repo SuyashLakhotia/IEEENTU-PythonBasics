@@ -21,7 +21,7 @@ print("This is an example of Python code.")
 
 a = int(input("Enter a value for a: "))
 b = int(input("Enter a value for b: "))
-print("The sum of a & b is: " + (a + b))  # print the sum of a & b
+print("The sum of a & b is: " + str(a + b))  # print the sum of a & b
 ```
 
 **Statement:** Each line of code in a Python program is called a statement. Python interprets statements and runs them one by one.
@@ -73,7 +73,7 @@ print("Hello, world")
 
 a = 5
 print(a)
-print("The value of 'a' is: " + a)
+print("The value of 'a' is: " + str(a))
 ```
 
 ### Getting User Input
@@ -163,7 +163,7 @@ print(ages)  # {"Bob" : 21, "Jake" : 24, "John" : 23, "Jane" : 23}
 ages["Bob"] = 24
 print(ages)  # {"Bob" : 24, "Jake" : 24, "John" : 23, "Jane" : 23}
 
-print(ages.keys())  # ["Bob", "Jake", "John", "Jane"]
+print(ages.keys())  # dict_keys(["Bob", "Jake", "John", "Jane"])
 ```
 
 ## Control Flow
@@ -310,7 +310,7 @@ A `for` loop can also be used to iterate through a dictionary:
 ```python
 phoneBook = {"Bob" : "555-555", "Jake" : "555-556", "John" : "555-565", "Jane" : "555-655"}
 for name in phoneBook.keys():
-    print(name + " : " phoneBook[name])
+    print(name + " : " + phoneBook[name])
 ```
 
 Alternatively, a `for` loop can be used like a `while` loop with a definite number of repetitions using the `range()` function. The `range()` function returns a list of integers from 0 up till but not including the passed argument.
@@ -354,6 +354,6 @@ def sum(a, b):
     c = a + b
     return c
 
-s = sum(a, b)   # s is set to the value of c from sum()
+s = sum(1, 2)   # s is set to the value of c from sum()
 print(s)
 ```

@@ -7,6 +7,7 @@ lowerLimit = 1
 upperLimit = 10
 
 answer = randint(lowerLimit, upperLimit)
+print("Answer: " + str(answer))
 
 guess = makeGuess(lowerLimit, upperLimit)
 print(guess)

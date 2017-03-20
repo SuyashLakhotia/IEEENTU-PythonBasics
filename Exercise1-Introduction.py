@@ -4,4 +4,4 @@ age = 19
 
 print("My name is " + name)
 print("I'm majoring in " + major)
-print("I'm currently " + age + " years old")
+print("I'm currently " + str(age) + " years old")
