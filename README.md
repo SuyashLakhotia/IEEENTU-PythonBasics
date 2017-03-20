@@ -32,7 +32,7 @@ print("The sum of a & b is: " + (a + b))  # print the sum of a & b
 
 ## Variables
 
-#### What are variables?
+### What are variables?
 
 Recall variables from algebra — `x = 5`. In programming, variables are used to store data temporarily to make it easier to refer to them. The value referred to by a variable can be updated as you execute the program using the *assignment operator* i.e. `=`.
 
@@ -64,7 +64,7 @@ intA = int(strA)      # 123
 floatA = float(strA)  # 123.0
 ```
 
-#### Printing Variables
+### Printing Variables
 
 In Python, we can print text onto the *console* using the `print()` function.
 
@@ -76,7 +76,7 @@ print(a)
 print("The value of 'a' is: " + a)
 ```
 
-#### User Input
+### Getting User Input
 
 In Python, we can get input from the user and store this in variables using the `input()` function. The function prints whatever prompt is passed to it and waits for the user input. Once the `Enter` key is pressed, it stores the user input into the variable **as a string**.
 
@@ -88,7 +88,7 @@ age = int(input("Enter your age: "))
 print(age)
 ```
 
-#### Arithmetic Operations
+### Arithmetic Operations
 
 Variables can be used to perform simple arithmetic operations. For example:
 
@@ -102,7 +102,7 @@ f = a / b	# division
 g = a % b	# modulus (remainder)
 ```
 
-#### Strings
+### Strings
 
 Strings represent a sequence of one or more characters. Each character can be accessed separately using a zero-based index.
 
@@ -137,7 +137,7 @@ print(s[:3])    # "hel"
 print(s[:])     # "hello"
 ```
 
-#### Lists
+### Lists
 
 Instead of variables holding individual values, it is also possible to create a list of values in Python. Each item in the list is called an *element* and can be accessed individually using a zero-based index.
 
@@ -148,7 +148,7 @@ print(listOfNums[1])
 print(len(listOfNums))
 ```
 
-#### Dictionaries
+### Dictionaries
 
 Dictionaries in Python allow you to store key-value pairs. Keys are unique within a dictionary while values may be repeated. For example, a dictionary of names (keys) and ages (values). Because the keys are unique, they are used as the index of the dictionary to access the values.
 
@@ -219,7 +219,7 @@ A colon marks the beginning of a *block* and statements within each *block* are 
 
 Conditions are *boolean expressions* that return either `True` or `False`. They are made up of *relational operators* and *logical operators*.
 
-**Relational Operators:**
+##### Relational Operators
 
 1. `==`: equals to
 2. `!=`: not equals to
@@ -235,7 +235,7 @@ else:
     print("x & y are not equal.")
 ```
 
-**Logical Operators:**
+##### Logical Operators
 
 1. `boolExpr1 and boolExpr2`: Both expressions have to be `True` for the entire expression to be `True`
 2. `boolExpr1 or boolExpr2`: Either one expression has to be `True` for the entire expression to be `True`
@@ -332,7 +332,7 @@ def functionName():
 functionName()  # Call the function
 ```
 
-#### Parameters & Arguments
+### Parameters & Arguments
 
 Functions can be defined with *parameters*, which are essentially variables that are set when the function is called using *arguments*. This allows functions to be reused with different data values.
 
@@ -345,7 +345,7 @@ sum(3, 2)
 sum(32, 65)
 ```
 
-#### Return Values
+### Return Values
 
 Functions can also return values back to where the function was called so that the result can be further used.
 
