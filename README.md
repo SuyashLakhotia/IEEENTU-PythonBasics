@@ -357,4 +357,3 @@ def sum(a, b):
 s = sum(a, b)   # s is set to the value of c from sum()
 print(s)
 ```
-
