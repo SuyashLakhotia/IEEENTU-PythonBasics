@@ -1,4 +1,4 @@
-# Python Basics
+# IEEE Python Basics Workshop
 
 *by Suyash Lakhotia for IEEE NTU Student Branch*
 
